@@ -9,7 +9,7 @@ This is a list of solutions and tips I found useful when debugging problems on L
 
 A Linux swap partition/file is a bit like an extended RAM that can be used for caching files when RAM is low on space. The swap space can be allocated on the root partition or can be on a separate partition from the root's.
 
-Till Ubuntu 16 (iirc), swap space was assigned on a different partition from root's by default. In the newer Ubuntu versions (i.e. 19.10) however, the swap space is assigned to a 'swapfile' on the root partition instead. This led to a problem for me ... I had already reserved 4 GB of swap space on a separated partition during installation, but Ubuntu chose to create a 2 GB swap space of its own under `/swapfile`.
+Till Ubuntu 16 (iirc), swap space was assigned to a different partition from root's by default. In the newer Ubuntu versions (i.e. 19.10) however, the swap space is assigned to a 'swapfile' on the root partition instead. This led to a problem for me ... I had already reserved 4 GB of swap space on a separate partition during installation, but Ubuntu chose to create a 2 GB swap space of its own under `/swapfile`.
 
 Following the steps below, I was able to make Ubuntu use my reserved swap partition as a swap storage instead of the default swapfile.
 
